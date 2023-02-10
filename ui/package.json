@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "NEXT_PUBLIC_SPARQL_ENDPOINT=http://localhost:8080/sparql NEXT_PUBLIC_API_URL=http://localhost:8080 next dev",
     "build": "next build",
+    "gh-build": "GHPAGES=true next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",

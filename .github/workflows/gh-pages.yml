@@ -35,7 +35,7 @@ jobs:
     # Next.jsアプリをビルドする
     # プロジェクトルート直下に.nextディレクトリができる
     - name: build
-      run: npm run build
+      run: npm run gh-build
       working-directory: ./ui
 
     # 静的なHTMLとしてNext.jsアプリを生成する
