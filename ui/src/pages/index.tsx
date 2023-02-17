@@ -94,7 +94,7 @@ export default function Home() {
 
     const a = document.createElement('a')
     a.download = 'output.mp4'
-    a.href = movieUrl
+    a.href = `${API_ENDPOINT}/static/${movieUrl}`
     a.click()
   }, [movieUrl])
 
