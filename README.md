@@ -13,9 +13,9 @@
 - `docker compose -f full.docker-compose.yml up --build`を実行します。
 - しばらく待つと http://localhost:8080 で確認することができます。
 
-このとき、SPARQL Endpoint として GraphDB、動画生成を行うための Virtualhome API がローカルで起動します。
-それらが不要な場合は
-`docker compose up`を実行すると、可視化システムのみが立ち上がります。
+このとき、SPARQL Endpoint として GraphDB、動画生成を行うための Virtualhome API がローカルで起動します。  
+それらが不要な場合は  
+`docker compose up`を実行すると、可視化システムのみが立ち上がります。  
 そのとき
 
 ```docker-compose.yml
@@ -31,7 +31,7 @@
                   - NEXT_PUBLIC_API_URL: xxx # virtualhome apiのURL
 ```
 
-この`NEXT_PUBLIC_SPARQL_ENDPOINT`と`NEXT_PUBLIC_API_URL`の値をそれぞれの接続先の URL にする必要があります。
+この`NEXT_PUBLIC_SPARQL_ENDPOINT`と`NEXT_PUBLIC_API_URL`の値をそれぞれの接続先の URL にする必要があります。  
 またそれぞれの接続先が以下の条件を満たすならば、スクリプト生成システムは静的ページとして github pages に展開することもできます。
 
 - レスポンスヘッダーとして Access-Control-Allow-Origin を\*か、可視化システムが存在するドメインを返却すること。
@@ -57,9 +57,8 @@ git merge upstream/kgrc4si # upstreamブランチと同期
 
 # 起動方法
 
-https://github.com/aistairc/virtualhome_aist をクローンします。
-　ブランチを`docker`にします。
-
+- https://github.com/aistairc/virtualhome_aist をクローンします。
+- ブランチを`docker`にします。
 - https://github.com/aistairc/virtualhome_unity_aist/releases/download/Build_2023_0111/Build_2023_0111_linux.zip をダウンロードし、`/docker/unity`に設置します。
 - `docker`に移動します。
 - `docker compose up --build`を実行します。
