@@ -9,6 +9,7 @@ services:
     volumes:
       - ./.graphdb-data:/opt/graphdb/home    
       - ./RDF:/opt/graphdb/home/graphdb-import
+      - old:/opt/graphdb/home/graphdb-import/old
       - ./graphdb-repo-config.ttl:/opt/graphdb/graphdb-repo-config.ttl
       - ./entrypoint.sh:/opt/graphdb/entrypoint.sh
     environment:  
@@ -54,3 +55,5 @@ services:
       args:
         NEXT_PUBLIC_SPARQL_ENDPOINT: http://localhost:8080/sparql
         NEXT_PUBLIC_API_URL: http://localhost:8080
+volumes:
+  old:
