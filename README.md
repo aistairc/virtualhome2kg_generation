@@ -92,3 +92,24 @@ git merge upstream/kgrc4si # upstreamブランチと同期
 ```
 
 の services > api > ports 設定されているものの左側の数値を変更します。
+
+## 各サービスについての補足
+
+`full.docker-compose.yml`には以下のサービスが含まれています。
+
+- graphdb
+- unity
+- api
+- nginx
+- vheditor
+
+それぞれのサービスの役割は以下の通りです。
+
+- `graphdb`は既存のアクティビティの情報を取得するためにそれらの情報を格納した SPARQL Endpoint を提供しています。
+- `unity`はスクリプトを解釈して動画を生成する virtualhome を提供しています。
+- `api`は`unity`とブラウザを仲立ちするための API を提供しています
+- `nginx`はブラウザが localhost へ送ったリクエストを`graphdb`, `api`, `vheditor`へ適切に振り分けています。
+- `vheditor`はフロントエンド本体であり、ブラウザで表示するコンテンツをホスティングしています。
+
+`docker-compose.yml`は`graphdb`と`unity + api`が外部ホスティングされている場合を想定しており、その場合は`NEXT_PUBLIC_SPARQL_ENDPOINT`, `NEXT_PUBLIC_API_URL`をホスティング先に変更して再ビルドすることで参照先を外部に向けることもできます。  
+同様に、`graphdb`は手元でホスティングするが virtualhome は外部にホスティングする、逆に virtualhome は手元で立ち上げるが`graphdb`は外部にあるものは使うなどの場合は`full.docker-compose`から`graphdb`部分や`unity + api`部分をコピペすることでそれらの場合に対応することも可能です。
