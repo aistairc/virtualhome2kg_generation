@@ -1,6 +1,6 @@
 version: '3'
 services:
-  vhecitor:
+  vheditor:
     ports:
       - 3000:3000
     build: 
