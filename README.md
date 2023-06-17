@@ -3,6 +3,7 @@
 - Linux or Mac with Docker and Docker Compose installed.
 
 # Virtualhome script generation system
+![代替テキスト](fig/Fig1.png)
 
 # How to start
 
