@@ -10,7 +10,7 @@
 - Clone https://github.com/aistairc/virtualhome2kg_generation.
 - directory and branch to kgrc4si.
 - Run `git submodule update --init`.
-- Download https://github.com/aistairc/virtualhome_unity_aist/releases/download/Build_2023_0111/Build_2023_0111_linux.zip and copy it to `/ virtualhome_aist/docker/unity`.
+- Download https://github.com/aistairc/virtualhome_unity_aist/releases/download/Modified_Camera_Build/Modified_Camera_Linux.zip and copy it to `virtualhome_aist/docker/unity`.
 - Run `docker compose -f full.docker-compose.yml up --build`.
 - Wait for a while, and you will see it at http://localhost:8080.
 
@@ -60,7 +60,7 @@ git merge upstream/kgrc4si # Sync with upstream branch
 
 - Clone https://github.com/aistairc/virtualhome_aist.
 - Make the branch `docker`.
-- Download https://github.com/aistairc/virtualhome_unity_aist/releases/download/Build_2023_0111/Build_2023_0111_linux.zip and place it in `/docker/ unity`.
+- Download https://github.com/aistairc/virtualhome_unity_aist/releases/download/Modified_Camera_Build/Modified_Camera_Build_Linux.zip and place it in `/docker/ unity`.
 - Go to `docker`.
 - Run `docker compose up --build`.
 - Open http://localhost/ and if you see `{"Hello": "VirtualHome"}` on the screen, you are up and running.

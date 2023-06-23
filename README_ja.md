@@ -9,7 +9,7 @@
 - https://github.com/aistairc/virtualhome2kg_generation を clone します。
 - ディレクトリに入り、ブランチを kgrc4si にします。
 - `git submodule update --init`を実行します。
-- https://github.com/aistairc/virtualhome_unity_aist/releases/download/Build_2023_0111/Build_2023_0111_linux.zip をダウンロードし、`/virtualhome_aist/docker/unity`に設置します。
+- https://github.com/aistairc/virtualhome_unity_aist/releases/download/Modified_Camera_Build/Modified_Camera_Build_Linux.zip をダウンロードし、`/virtualhome_aist/docker/unity`に設置します。
 - `docker compose -f full.docker-compose.yml up --build`を実行します。
 - しばらく待つと http://localhost:8080 で確認することができます。
 
@@ -59,7 +59,7 @@ git merge upstream/kgrc4si # upstreamブランチと同期
 
 - https://github.com/aistairc/virtualhome_aist をクローンします。
 - ブランチを`docker`にします。
-- https://github.com/aistairc/virtualhome_unity_aist/releases/download/Build_2023_0111/Build_2023_0111_linux.zip をダウンロードし、`/docker/unity`に設置します。
+- https://github.com/aistairc/virtualhome_unity_aist/releases/download/Modified_Camera_Build/Modified_Camera_Build_Linux.zip をダウンロードし、`/docker/unity`に設置します。
 - `docker`に移動します。
 - `docker compose up --build`を実行します。
 - http://localhost/ を開き画面に`{"Hello":"VirtualHome"}`が表示されていれば起動できています。
