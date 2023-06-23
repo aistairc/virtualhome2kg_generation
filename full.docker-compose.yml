@@ -39,21 +39,21 @@ services:
     depends_on:
       unity:
         condition: service_started
-  nginx:
-    image: nginx:latest
-    depends_on:
-      - graphdb
-      - vhecitor
-      - api
-    ports:
-      - 8080:80
-    volumes:
-      - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
   vheditor:
     build: 
       context: ui
       args:
         NEXT_PUBLIC_SPARQL_ENDPOINT: http://localhost:8080/sparql
         NEXT_PUBLIC_API_URL: http://localhost:8080
+  nginx:
+    image: nginx:latest
+    depends_on:
+      - graphdb
+      - vheditor
+      - api
+    ports:
+      - 8080:80
+    volumes:
+      - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
 volumes:
   old:
